@@ -1,0 +1,130 @@
+/* Reset e Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  color: #323232;
+  border: none;
+}
+
+/* Corpo */
+body {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+/* Container do Formulário */
+#cadastro-container {
+  background-color: #fff;
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px 30px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1),
+              0 0 20px 0 #4e7fb7;
+}
+
+/* Título */
+h1 {
+  margin-bottom: 20px;
+  color: #003d80;
+  font-size: 1.4rem;
+}
+
+/* Subtítulo */
+.subtitulo-boas-vindas {
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: suave 0.7s;
+}
+
+/* Labels */
+label {
+  font-weight: bold;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+/* Campos de entrada */
+input {
+  padding: 10px;
+  font-size: 1rem;
+  border-bottom: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+/* Campos readonly */
+input[readonly] {
+  background-color: #e0e0e0;
+}
+
+/* Texto auxiliar */
+small {
+  font-size: 0.75rem;
+  color: #666;
+  text-align: left;
+}
+
+/* Botão */
+button {
+  background-color: #0056b3;
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #003d80;
+}
+
+/* Animação */
+@keyframes suave {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Resposta de Cadastro */
+#resposta-cadastro {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #008000;
+  font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #cadastro-container {
+    width: 90%;
+    margin-top: 15vh;
+  }
+
+  input,
+  button {
+    font-size: 0.9rem;
+  }
+}

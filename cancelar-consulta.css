@@ -1,0 +1,127 @@
+/* Reset e fonte base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  color: #323232;
+  border: none;
+}
+
+body {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+/* Links */
+a {
+  font-size: .8rem;
+  color: #0056b3;
+  text-decoration: none;
+}
+
+a:hover {
+  color: blue;
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  background-color: #e0f0ff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1),
+              0 0 20px 0 #4e7fb7;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  color: #0056b3;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* Link de navegação */
+.navegacao-retorno {
+  margin-top: 10px;
+}
+
+/* Container principal */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Seção de cancelamento */
+#cancelar-consulta {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1),
+              0 0 20px 0 #4e7fb7;
+  margin-bottom: 20px;
+}
+
+#cancelar-consulta h2 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #0056b3;
+  font-weight: 600;
+}
+
+/* Lista de consultas */
+#lista-consultas {
+  list-style: none;
+}
+
+#lista-consultas li {
+  background-color: #f0f4f8;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Botão de cancelar */
+#lista-consultas button {
+  background-color: #c0392b;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#lista-consultas button:hover {
+  background-color: #992d22;
+}
+
+/* Rodapé */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f0f4f8;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  border-top: 1px solid #ccc;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  #lista-consultas li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

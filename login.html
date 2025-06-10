@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Título da página -->
+    <title>Login - Harmonia Saúde</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="login-container">
+        <!-- Nome da clínica  -->
+        <h1>Harmonia Saúde</h1>
+
+        <!-- Formulário de login -->
+        <form id="form-login">
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" id="senha" required>
+
+            <!-- Links para cadastro e recuperação de senha -->
+            <a href="cadastro.html" id="cadastro-link">Não tem uma conta? Cadastre-se</a>
+            <a href="#" id="forgot-pass">Esqueceu a senha?</a>
+
+            <!-- Botão de login -->
+            <button type="submit" id="button">Login</button>
+        </form>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

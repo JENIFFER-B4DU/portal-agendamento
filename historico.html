@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Histórico de Consultas | Clínica Harmonia Saúde</title>
+
+  <!-- Estilos externos -->
+  <link rel="stylesheet" href="historico.css" />
+
+  <!-- Fonte padrão do projeto -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Cabeçalho da página -->
+  <header>
+    <h1>Histórico de Consultas</h1>
+    <p>Aqui, cada atendimento representa um passo em direção ao seu bem-estar. Estamos sempre ao seu lado.</p>
+    <nav class="navegacao-retorno">
+      <a href="painel.html">← Voltar ao Painel Inicial</a>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="container">
+    <!-- Seção de Consultas Futuras -->
+    <section id="secao-historico">
+      <h2>Consultas Futuras</h2>
+      <div id="consultas-futuras" class="lista-consultas">
+        <ul></ul> <!-- Lista que será preenchida via JavaScript -->
+      </div>
+      <p id="mensagem-futuras" class="mensagem-vazia" style="display: none;">Nenhuma consulta futura encontrada.</p>
+    </section>
+
+    <!-- Seção de Consultas Passadas -->
+    <section id="secao-historico-passado">
+      <h2>Consultas Passadas</h2>
+      <div id="consultas-passadas" class="lista-consultas">
+        <ul></ul> <!-- Lista que será preenchida via JavaScript -->
+      </div>
+      <p id="mensagem-passadas" class="mensagem-vazia" style="display: none;">Nenhuma consulta passada encontrada.</p>
+    </section>
+  </main>
+
+  <!-- Rodapé da página -->
+  <footer>
+    <p>&copy; 2025 Clínica Harmonia Saúde</p>
+  </footer>
+
+  <!-- Script da página -->
+  <script src="historico.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel do Paciente - Clínica Harmonia Saúde</title>
+  <link rel="stylesheet" href="painel.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Clínica Harmonia Saúde</h1>
+    <p class="mensagem-boas-vindas">
+      É ótimo ter você aqui! Utilize o painel para cuidar da saúde.
+    </p>
+  </header>
+
+  <!-- Container principal -->
+  <div class="container">
+
+    <!-- Conteúdo principal -->
+    <main>
+
+      <!-- Informações do paciente -->
+      <section id="info-paciente">
+        <h2>Seus Dados</h2>
+        <p><strong>Nome:</strong> <span id="nome"></span></p>
+        <p><strong>CPF:</strong> <span id="cpf"></span></p>
+        <p><strong>Data de Nascimento:</strong> <span id="dataNascimento"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>Telefone:</strong> <span id="telefone"></span></p>
+        <p><strong>Endereço:</strong> <span id="endereco"></span></p>
+      </section>
+
+      <!-- Ações rápidas -->
+      <section id="acoes-rapidas">
+        <h2>Ações Rápidas</h2>
+        <div class="botoes-acoes">
+          <button onclick="agendarConsulta()">Agendar Consulta</button>
+          <button onclick="cancelarConsulta()">Cancelar Consulta</button>
+          <button onclick="atualizarDados()">Atualizar Dados</button>
+          <button onclick="verPlano()">Plano de Saúde</button>
+          <button onclick="verHistorico()">Histórico de Consultas</button>
+          <button onclick="abrirDuvidas()">Dúvidas</button>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Aside unificado -->
+    <aside class="box-infos">
+      <div class="box-receita">
+        <h2>Receita Médica</h2>
+        <p>Este recurso estará disponível após a sua primeira consulta com um de nossos médicos.</p>
+        <button id="btnReceita" disabled>Visualizar Receita</button>
+      </div>
+      
+      <div class="box-familia">
+        <h2>Família</h2>
+        <p>Gerencie os dados dos seus dependentes e facilite o agendamento para toda a família.</p>
+        <button onclick="incluirDependente()">Incluir Dependente</button>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Clínica Harmonia Saúde - Todos os direitos reservados.</p>
+    <p>📍 Rua da Saúde, 123 - Centro, São Paulo - SP</p>
+    <p>📞 (11) 99999-9999 | ✉️ contato@clinicasaude.com.br</p>
+    <p>Atendimento: Segunda a Sexta, das 08h às 18h</p>
+  </footer>
+
+  <script src="painel.js"></script>
+</body>
+
+</html>

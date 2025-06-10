@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plano de Saúde - Clínica Harmonia Saúde</title>
+  <link rel="stylesheet" href="plano-saude.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+  <h1>Plano de Saúde</h1>
+  <p>
+    Se você possui um plano de saúde e deseja utilizá-lo em nossos atendimentos, por favor, valide os dados abaixo.
+  </p>
+
+  <nav class="navegacao-retorno">
+    <a href="painel.html">← Voltar ao Painel Inicial</a>
+  </nav>
+</header>
+
+
+  <main>
+    <form id="form-plano">
+      <label for="tipo-plano">Selecionar Plano:</label>
+      <select id="tipo-plano" required>
+        <option value="">-- Selecione --</option>
+        <option value="basico">Plano Básico</option>
+        <option value="premium">Plano Premium</option>
+        <option value="platinum">Plano Platinum</option>
+      </select>
+
+      <label for="data-vencimento">Data de Vencimento:</label>
+      <input type="date" id="data-vencimento" required />
+
+      <button type="button" id="btn-validar">Validar Plano</button>
+
+      <div style="margin-top: 15px;">
+  <input type="checkbox" id="editar-plano" aria-label="Permitir edição dos dados do plano" />
+  <label for="editar-plano">Atualizar dados do plano</label>
+</div>
+
+    </form>
+
+    <section id="resumo-plano" style="display: none;">
+      <h3>Resumo do Plano</h3>
+      <div id="mensagem-resumo" class="mensagem"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Clínica Harmonia Saúde - Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="plano-saude.js"></script>
+</body>
+</html>

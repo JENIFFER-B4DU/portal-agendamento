@@ -1,0 +1,219 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  color: #323232;
+  border: none;
+}
+
+body {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+/* Links */
+a {
+  font-size: .8rem;
+  color: #0056b3;
+  text-decoration: none;
+}
+a:hover {
+  color: blue;
+}
+
+/* Layout principal com 2 colunas */
+.container.layout-duplo {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  background-color: #e0f0ff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px 0 #4e7fb7;
+}
+header h1 {
+  font-size: 1.6rem;
+  color: #0056b3;
+}
+.subtitulo {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* Caixas principais */
+.box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px 0 #4e7fb7;
+}
+
+/* Títulos */
+h2, .titulo-secao {
+  font-size: 1.1rem;
+  color: #0056b3;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Campos do formulário */
+.campo {
+  margin-bottom: 15px;
+}
+.campo label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+.campo input,
+.campo select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* Campos lado a lado */
+.linha-dupla {
+  display: flex;
+  gap: 20px;
+}
+.linha-dupla .campo {
+  flex: 1;
+}
+
+/* Radios lado a lado */
+.radio-inline {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+.radio-inline label {
+  font-size: 0.9rem;
+}
+
+/* Botões do formulário */
+.botoes-formulario {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+.botoes-formulario button {
+  flex: 1;
+  background-color: #0056b3;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+.botoes-formulario button:hover {
+  background-color: #003d80;
+}
+
+/* Botão Confirmar */
+.botoes-carrinho {
+  margin-top: 15px;
+}
+.botoes-carrinho button {
+  width: 100%;
+  background-color: #0056b3;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+.botoes-carrinho button:hover {
+  background-color: #003d80;
+}
+
+/* Mensagens de plano */
+.mensagem-validado,
+.mensagem-invalido {
+  font-size: 0.88rem;
+  margin-top: 10px;
+}
+.mensagem-validado {
+  color: green;
+}
+.mensagem-invalido {
+  color: red;
+}
+
+/* Lista de agendamentos */
+#lista-consultas {
+  list-style: disc inside;
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+.valor-total {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Informações extras */
+.coluna-agendamento p,
+.coluna-agendamento ul {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+.coluna-agendamento ul {
+  padding-left: 20px;
+}
+
+/* Confirmação */
+.coluna-confirmacao {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 25px;
+  background-color: #e0f0ff;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.mensagem-final {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Rodapé */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f0f4f8;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  border-top: 1px solid #ccc;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container.layout-duplo {
+    grid-template-columns: 1fr;
+  }
+  .linha-dupla {
+    flex-direction: column;
+  }
+  .botoes-formulario {
+    flex-direction: column;
+  }
+}

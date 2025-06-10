@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agendar Consulta - Clínica Harmonia Saúde</title>
+  <link rel="stylesheet" href="agendar-consulta.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Agendamento de Consultas</h1>
+    <p class="subtitulo">Organize seus atendimentos de forma prática e rápida</p>
+    <nav>
+      <a href="painel.html">← Voltar ao Painel Inicial</a>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="container layout-duplo">
+    <!-- Coluna da esquerda -->
+    <section class="box coluna-formulario">
+      <h2>Escolha do Profissional</h2>
+
+      <div class="campo">
+        <label for="especialidade">Especialidade</label>
+        <select id="especialidade" required>
+          <option value="">Selecione...</option>
+          <option value="Cardiologia">Cardiologia</option>
+          <option value="Dermatologia">Dermatologia</option>
+          <option value="Ortopedia">Ortopedia</option>
+          <option value="Pediatria">Pediatria</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="medico">Médico</label>
+        <select id="medico" required>
+          <option value="">Selecione uma especialidade primeiro</option>
+        </select>
+      </div>
+
+      <form id="form-agendamento">
+        <!-- Modalidade -->
+        <fieldset aria-labelledby="modalidade-legenda">
+          <legend id="modalidade-legenda" class="titulo-secao">Modalidade de Atendimento</legend>
+          <div class="radio-inline">
+            <label>
+              <input type="radio" name="tipoConsulta" value="plano" id="comPlano" disabled />
+              Convênio
+            </label>
+            <label>
+              <input type="radio" name="tipoConsulta" value="particular" id="particular" checked />
+              Particular
+            </label>
+          </div>
+          <p id="aviso-plano" class="mensagem-validado" style="display: none;">
+            ✅ Seu plano foi validado com sucesso.
+          </p>
+          <p id="aviso-plano-invalido" class="mensagem-invalido" style="display: none;">
+            ⚠️ Para utilizar esta modalidade, valide seu plano na área do painel.
+          </p>
+        </fieldset>
+
+        <!-- Data e horário -->
+        <div class="linha-dupla">
+          <div class="campo">
+            <label for="data">Data da Consulta</label>
+            <input type="date" id="data" name="data" required />
+          </div>
+          <div class="campo">
+            <label for="horario">Horário</label>
+            <select id="horario" required>
+              <option value="">Selecione...</option>
+              <option value="09:00">09:00</option>
+              <option value="10:30">10:30</option>
+              <option value="14:00">14:00</option>
+              <option value="15:30">15:30</option>
+              <option value="17:00">17:00</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Botões -->
+        <div class="botoes-formulario">
+          <button type="button" onclick="adicionarConsulta()">Agendar</button>
+          <button type="reset">Limpar</button>
+        </div>
+      </form>
+      <br>
+
+      <!-- Informações adicionais -->
+      <h3 class="titulo-secao">Informações de Atendimento</h3>
+      <p>📍Enderço: Rua da Saúde, 123 - Centro, São Paulo - SP</p>
+      <p>📞Telefone: (11) 99999-9999</p> 
+      <p>✉️ E-mail: contato@clinicasaude.com.br</p>
+      <p><strong>Atendimento:</strong> Segunda a Sexta, das 08h às 18h</p>
+
+      <br>
+      <h3 class="titulo-secao">Recomendações</h3>
+      <ul>
+        <li>Levar documento original com foto</li>
+        <li>Carteirinha do convênio, se tiver</li>
+        <li>Exames e laudos anteriores</li>
+        <li>Comparecer com 30 minutos de antecedência</li>
+      </ul>
+    </section>
+
+    <!-- Coluna da direita -->
+    <section class="box coluna-agendamento">
+      <h2>Finalizar Agendamento</h2>
+
+      <ul id="lista-consultas"></ul>
+      <div id="valor-total" class="valor-total">Total: R$ 0,00</div>
+
+      <fieldset id="campo-pagamento" style="display: none;" aria-labelledby="pagamento-legenda">
+        <legend id="pagamento-legenda" class="titulo-secao">Forma de Pagamento</legend>
+        <div class="radio-inline">
+          <label>
+            <input type="radio" name="formaPagamento" value="pix" checked />
+            Pix
+          </label>
+          <label>
+            <input type="radio" name="formaPagamento" value="cartao" />
+            Cartão de Crédito
+          </label>
+        </div>
+      </fieldset>
+
+      <div class="botoes-carrinho">
+        <button onclick="finalizarAgendamento()">Confirmar</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Confirmação -->
+  <section class="box coluna-confirmacao" id="resposta-agendamento" style="display:none;">
+    <h2>Agendamento Confirmado</h2>
+    <p id="mensagem-final" class="mensagem-final"></p>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Clínica Harmonia Saúde - Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="agendar-consulta.js"></script>
+</body>
+
+</html>

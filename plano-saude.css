@@ -1,0 +1,164 @@
+/* Reset e padrão base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  color: #323232;
+  border: none;
+}
+
+body {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+/* Cabeçalho da Página */
+header {
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  background-color: #e0f0ff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px 0 #4e7fb7;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  color: #0056b3;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 5px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Navegação de retorno no cabeçalho */
+.navegacao-retorno {
+  margin-top: 8px;
+}
+
+.navegacao-retorno a {
+  font-size: 0.85rem;
+  color: #007acc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.navegacao-retorno a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Formulário */
+form {
+  background-color: #fff;
+  max-width: 500px;
+  margin: 0 auto 20px;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px 0 #4e7fb7;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Labels e Inputs */
+label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0056b3;
+  margin-bottom: 5px;
+}
+
+select,
+input[type="date"] {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  border-bottom: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Checkbox para edição */
+input[type="checkbox"] {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+/* Botões */
+button {
+  background-color: #0056b3;
+  color: white;
+  padding: 10px 15px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+}
+
+button:hover {
+  background-color: #003d80;
+}
+
+/* Resumo e Mensagem */
+#resumo-plano {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px 0 #4e7fb7;
+}
+
+#resumo-plano h3 {
+  font-size: 1.1rem;
+  color: #0056b3;
+  margin-bottom: 10px;
+}
+
+.mensagem {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* Rodapé */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f0f4f8;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  border-top: 1px solid #ccc;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  form, #resumo-plano {
+    padding: 20px 15px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  header p {
+    font-size: 0.85rem;
+  }
+}

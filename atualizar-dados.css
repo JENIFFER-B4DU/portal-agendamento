@@ -1,0 +1,150 @@
+/* Importa fonte padrão do projeto */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* Reset global e fonte */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  color: #323232;
+  border: none;
+}
+
+body {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+/* Cabeçalho com destaque */
+header {
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  background-color: #e0f0ff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1),
+              0 0 20px 0 #4e7fb7;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  color: #0056b3;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* Link de retorno ao painel */
+.navegacao-retorno {
+  max-width: 800px;
+  margin: 0 auto 15px auto;
+  text-align: left;
+}
+
+.navegacao-retorno a {
+  font-size: 0.9rem;
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.navegacao-retorno a:hover {
+  color: #003d80;
+  text-decoration: underline;
+}
+
+/* Container principal do formulário */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1),
+              0 0 20px 0 #4e7fb7;
+}
+
+/* Formulário com espaçamento entre os campos */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Rótulos */
+label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+/* Campos de entrada */
+input {
+  padding: 10px;
+  font-size: 1rem;
+  border-bottom: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+/* Campo de leitura somente */
+input[readonly] {
+  background-color: #e0e0e0;
+}
+
+/* Estilo do subtítulo da seção de senha */
+.subtitulo-senha {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0056b3;
+  margin-bottom: -5px;
+}
+
+/* Botão principal */
+button {
+  background-color: #0056b3;
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #003d80;
+}
+
+/* Rodapé simples */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f0f4f8;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  border-top: 1px solid #ccc;
+}
+
+/* Responsividade: ajusta largura no mobile */
+@media (max-width: 768px) {
+  main {
+    width: 90%;
+    padding: 20px;
+  }
+
+  button {
+    font-size: 0.95rem;
+  }
+
+  .navegacao-retorno {
+    text-align: center;
+  }
+}
